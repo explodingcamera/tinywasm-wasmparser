@@ -605,7 +605,7 @@ dependencies = [
 
 [[package]]
 name = "tinywasm-wasmparser"
-version = "0.200.1"
+version = "0.200.2"
 dependencies = [
  "ahash",
  "anyhow",

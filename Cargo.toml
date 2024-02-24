@@ -1,6 +1,6 @@
 [package]
 name="tinywasm-wasmparser"
-version="0.200.1"
+version="0.200.2"
 authors=["Yury Delendik <ydelendik@mozilla.com>", "Henry Gressmann <mail@henrygressmann.de>"]
 license="Apache-2.0 WITH LLVM-exception"
 repository="https://github.com/explodingcamera/tinywasm-wasmparser"
@@ -10,16 +10,15 @@ description="TinyWasm's fork of the wasmparser crate"
 edition="2021"
 
 [features]
-default=["wasm-unknown", "std"]
+default=["std"]
 std=[]
-wasm-unknown=["ahash/compile-time-rng"]
 
 [dependencies]
 bitflags={version="2.4.1", default-features=false}
 indexmap={version="2.2", default-features=false}
 semver={version="1.0", default-features=false}
 hashbrown={version="0.14.3", default-features=false, features=["ahash", "inline-more"]}
-ahash={version="0.8", default-features=false}
+ahash={version="0.8", default-features=false, features=["compile-time-rng"]}
 
 [dev-dependencies]
 anyhow="1.0"
