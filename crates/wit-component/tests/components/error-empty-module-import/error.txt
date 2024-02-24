@@ -1,1 +1,0 @@
-no top-level imported function `foo` specified
