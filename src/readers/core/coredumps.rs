@@ -10,7 +10,7 @@ use crate::{BinaryReader, FromReader, Result};
 /// # Examples
 ///
 /// ```
-/// use wasmparser::{ BinaryReader, CoreDumpSection, FromReader, Result };
+/// use tinywasm_wasmparser::{ BinaryReader, CoreDumpSection, FromReader, Result };
 /// let data: &[u8] = &[0x00, 0x09, 0x74, 0x65, 0x73, 0x74, 0x2e, 0x77, 0x61,
 ///      0x73, 0x6d];
 /// let mut reader = BinaryReader::new(data);
@@ -39,7 +39,7 @@ impl<'a> FromReader<'a> for CoreDumpSection<'a> {
 /// # Example
 ///
 /// ```
-/// use wasmparser::{ BinaryReader, CoreDumpModulesSection, FromReader, Result };
+/// use tinywasm_wasmparser::{ BinaryReader, CoreDumpModulesSection, FromReader, Result };
 /// let data: &[u8] = &[0x01, 0x00, 0x04, 0x74, 0x65, 0x73, 0x74];
 /// let mut reader = BinaryReader::new(data);
 /// let modules_section = CoreDumpModulesSection::from_reader(&mut reader).unwrap();
@@ -129,7 +129,7 @@ impl<'a> FromReader<'a> for CoreDumpInstance {
 /// ```
 /// let data: &[u8] = &[0x00, 0x04, 0x6d, 0x61, 0x69, 0x6e, 0x01, 0x00, 0x04,
 ///     0x2a, 0x33, 0x01, 0x7f, 0x01, 0x01, 0x7f, 0x02];
-/// use wasmparser::{ BinaryReader, CoreDumpStackSection, FromReader };
+/// use tinywasm_wasmparser::{ BinaryReader, CoreDumpStackSection, FromReader };
 /// let mut reader = BinaryReader::new(data);
 /// let corestack = CoreDumpStackSection::from_reader(&mut reader).unwrap();
 /// assert!(corestack.name == "main");

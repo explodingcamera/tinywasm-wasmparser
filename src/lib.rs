@@ -116,10 +116,10 @@ mod std;
 ///
 /// pub struct VisitAndDoNothing;
 ///
-/// impl<'a> wasmparser::VisitOperator<'a> for VisitAndDoNothing {
+/// impl<'a> tinywasm_wasmparser::VisitOperator<'a> for VisitAndDoNothing {
 ///     type Output = ();
 ///
-///     wasmparser::for_each_operator!(define_visit_operator);
+///     tinywasm_wasmparser::for_each_operator!(define_visit_operator);
 /// }
 /// ```
 #[macro_export]

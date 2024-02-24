@@ -421,7 +421,7 @@ impl Parser {
     // /// ```
     // /// use crate::std::io::Read;
     // /// use anyhow::Result;
-    // /// use wasmparser::{Parser, Chunk, Payload::*};
+    // /// use tinywasm_wasmparser::{Parser, Chunk, Payload::*};
     // ///
     // /// fn parse(mut reader: impl Read) -> Result<()> {
     // ///     let mut buf = Vec::new();
@@ -818,7 +818,7 @@ impl Parser {
     // /// ```
     // /// use crate::std::io::Read;
     // /// use anyhow::Result;
-    // /// use wasmparser::{Parser, Chunk, Payload::*};
+    // /// use tinywasm_wasmparser::{Parser, Chunk, Payload::*};
     // ///
     // /// fn parse(mut reader: impl Read) -> Result<()> {
     // ///     let mut buf = Vec::new();
@@ -941,7 +941,7 @@ impl Parser {
     // /// # Examples
     // ///
     // /// ```
-    // /// use wasmparser::{Result, Parser, Chunk, Payload::*};
+    // /// use tinywasm_wasmparser::{Result, Parser, Chunk, Payload::*};
     // /// use crate::std::ops::Range;
     // ///
     // /// fn objdump_headers(mut wasm: &[u8]) -> Result<()> {
