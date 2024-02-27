@@ -295,7 +295,10 @@ impl<'a> Iterator for OperatorsIteratorWithOffsets<'a> {
 macro_rules! define_visit_operator {
     ($(@$proposal:ident $op:ident $({ $($arg:ident: $argty:ty),* })? => $visit:ident)*) => {
         $(
-            fn $visit(&mut self $($(,$arg: $argty)*)?) -> Self::Output;
+            #[allow(unused_variables)]
+            fn $visit(&mut self $($(,$arg: $argty)*)?) -> Self::Output {
+                self.visit_default(stringify!($op))
+            }
         )*
     }
 }
@@ -326,6 +329,11 @@ pub trait VisitOperator<'a> {
 
         }
         for_each_operator!(visit_operator)
+    }
+
+    /// The default implementation for visiting any operator.
+    fn visit_default(&mut self, op: &str) -> Self::Output {
+        panic!("unimplemented operator: {:?}", op);
     }
 
     for_each_operator!(define_visit_operator);

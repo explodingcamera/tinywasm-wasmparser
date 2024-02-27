@@ -1,6 +1,6 @@
 [package]
 name="tinywasm-wasmparser"
-version="0.200.2"
+version="0.200.3"
 authors=["Yury Delendik <ydelendik@mozilla.com>", "Henry Gressmann <mail@henrygressmann.de>"]
 license="Apache-2.0 WITH LLVM-exception"
 repository="https://github.com/explodingcamera/tinywasm-wasmparser"
