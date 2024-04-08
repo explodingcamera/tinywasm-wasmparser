@@ -989,7 +989,8 @@ impl Module {
             | HeapType::Struct
             | HeapType::Array
             | HeapType::I31
-            | HeapType::Exn => return Ok(()),
+            | HeapType::Exn
+            | HeapType::NoExn => return Ok(()),
             HeapType::Concrete(type_index) => type_index,
         };
         match type_index {
@@ -1034,6 +1035,12 @@ impl Module {
         features: &WasmFeatures,
         offset: usize,
     ) -> Result<()> {
+        if ty.shared && !features.shared_everything_threads {
+            return Err(BinaryReaderError::new(
+                "shared globals require the shared-everything-threads proposal",
+                offset,
+            ));
+        }
         self.check_value_type(&mut ty.content_type, features, offset)
     }
 

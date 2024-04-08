@@ -46,7 +46,7 @@ mod std;
 /// The list of specializable Wasm proposals is as follows:
 ///
 /// - `@mvp`: Denoting a Wasm operator from the initial Wasm MVP version.
-/// - `@exceptions`: [Wasm `expection-handling` proposal]
+/// - `@exceptions`: [Wasm `exception-handling` proposal]
 /// - `@tail_call`: [Wasm `tail-calls` proposal]
 /// - `@reference_types`: [Wasm `reference-types` proposal]
 /// - `@sign_extension`: [Wasm `sign-extension-ops` proposal]
@@ -57,7 +57,7 @@ mod std;
 /// - `@relaxed_simd`: [Wasm `relaxed-simd` proposal]
 /// - `@gc`: [Wasm `gc` proposal]
 ///
-/// [Wasm `expection-handling` proposal]:
+/// [Wasm `exception-handling` proposal]:
 /// https://github.com/WebAssembly/exception-handling
 ///
 /// [Wasm `tail-calls` proposal]:
