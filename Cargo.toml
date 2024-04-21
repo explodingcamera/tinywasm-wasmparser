@@ -14,7 +14,7 @@ default=["std"]
 std=[]
 
 [dependencies]
-bitflags={version="2.4.1", default-features=false}
+bitflags={version="2.5.0", default-features=false}
 indexmap={version="2.2", default-features=false}
 semver={version="1.0", default-features=false}
 hashbrown={version="0.14.3", default-features=false, features=["ahash", "inline-more"]}
@@ -23,10 +23,10 @@ ahash={version="0.8", default-features=false, features=["compile-time-rng"]}
 [dev-dependencies]
 anyhow="1.0"
 criterion="0.5"
-wat="1.200"
-wast="202.0"
-rayon="1.8"
-once_cell="1.13.0"
-wasm-encoder="0.202"
+wat="1.205"
+wast="205.0"
+rayon="1.10"
+once_cell="1.19.0"
+wasm-encoder="0.205"
 env_logger="0.11"
 log="0.4"
